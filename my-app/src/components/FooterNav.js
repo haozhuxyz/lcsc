@@ -24,7 +24,7 @@ class FooterNav extends React.Component{
 
                   <Router>
 
-                      <Route path={"/Home"} exact component={Home}></Route>
+                      <Route path={"/"} exact component={Home}></Route>
                       <Route path={"/Classify"} component={Classify}></Route>
                       <Route path={"/Cart"} component={Cart}></Route>
                       <Route path={"/My"} component={My}></Route>
@@ -34,7 +34,7 @@ class FooterNav extends React.Component{
 
                       <div className={"footer"}>
 
-                          <NavLink style={{background:"#606063"}} activeStyle={{background:"#3c3e46"}} to={"/Home"} exact >
+                          <NavLink style={{background:"#606063"}} activeStyle={{background:"#3c3e46"}} to={"/"} exact >
                               <img src={mf1} alt=""/>
                               <span>
                                   首页
