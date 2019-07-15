@@ -9,6 +9,8 @@ import Home from "../views/Home"
 import Classify from "../views/Classify"
 import Cart from "../views/Cart"
 import My from "../views/My"
+import Login from "../views/Login"
+import Register from "../views/Register"
 import "../assets/css/FooterNav.css"
 import mf1 from "../assets/img/mf1.png"
 import mf2 from "../assets/img/mf2.png"
@@ -26,6 +28,9 @@ class FooterNav extends React.Component{
                       <Route path={"/Classify"} component={Classify}></Route>
                       <Route path={"/Cart"} component={Cart}></Route>
                       <Route path={"/My"} component={My}></Route>
+                      <Route path={"/login"} component={Login}></Route>
+                      <Route path={"/register"} component={Register}></Route>
+
 
                       <div className={"footer"}>
 
