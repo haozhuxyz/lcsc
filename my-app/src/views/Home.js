@@ -28,6 +28,8 @@ class Home extends React.Component{
                     </Router>
                 </div>
                 <div>活动</div>
+                <div>main</div>
+                <div>推荐</div>
             </div>
         )
     }
