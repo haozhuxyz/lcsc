@@ -10,6 +10,7 @@ class App extends React.Component{
   render(){
     return (
       <div className="App">
+
         <FooterNav></FooterNav>
       </div>
     );
