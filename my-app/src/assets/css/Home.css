@@ -1,0 +1,27 @@
+.goodsList{
+    float: left;
+    margin-top: .08rem;
+    background: #fff;
+    width: 48.925%;
+    margin-left: 1.075%;
+}
+.activeList{
+    width: 25%;
+    text-align: center;
+    float: left;
+    margin-bottom: .24rem;
+}
+.orderList{
+    width: 100%;
+    background: #fff;
+    margin-bottom: .2rem;
+    overflow: hidden;
+}
+.footerNav{
+    height: .88rem;
+    width: 100%;
+    background-color: #606063;
+    position: absolute;
+    bottom: 0;
+    z-index: 99;
+}
