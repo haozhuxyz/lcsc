@@ -17,7 +17,7 @@ class Home extends React.Component{
     render(){
         console.log(this.state.goods)
         return (
-            <div>
+            <div className="wrap">
                 {
                     this.state.activeList.map((v,index)=>{
                         return (
@@ -31,19 +31,40 @@ class Home extends React.Component{
                     this.state.orderList.map((v,index)=>{
                         return (
                             <div key={index} className="orderList">
-                                <h3>{v.title}</h3>
-                                <div>{v.recmmd_product_list.title}</div>
+                                <span className="orderListTitle">{index+1}、{v.title}</span>
+                                {
+                                    v.recmmd_product_list.map((m,i)=>{
+                                        return (
+                                            <div key={i} className="goods"  onClick={()=>this.routerTo(v)}>
+                                                <img src={m.img_url} alt=""></img>
+                                                <h4>{m.title}</h4>
+                                            </div>
+                                        )
+                                    })
+                                }
+                                <div>
+                                    {
+                                        v.brand.map((a,b)=>{
+                                            return (
+                                                <span key={b}>
+                                                    <span className="goodsFont">{a.name}</span>
+                                                </span>
+                                            )
+                                        })
+                                    }
+                                </div>
                                 <span>{v.brand.name}</span>
                             </div>
                         )
                     })
                 }
+                <div className="title">产品推荐</div>
                 {
                     this.state.goodsList.map((v,index)=>{
                         return (
                             <div key={index} className="goodsList">
                                 <h3>{v.title}</h3>
-                                <img src={v.img_url}></img>
+                                <img src={v.img_url} alt=""></img>
                                 <p>{v.business_name}</p>
                             </div>
                         )
@@ -65,6 +86,9 @@ class Home extends React.Component{
     }
     componentDidMount(){
         this.getGoods();
+    }
+    routerTo(v) {
+        this.props.history.push({pathname: `/Detail/${v.floor_id}`})
     }
 }
 
