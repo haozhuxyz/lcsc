@@ -75,14 +75,14 @@ class Home extends React.Component{
     }
     getGoods() {
         axios.get("https://www.linkpet.com.cn/Mobile/0/0")
-                        .then(({data})=>{
-                            this.setState({
-                                goods:data.data,
-                                orderList:data.data.floor,
-                                activeList:data.data.icons,
-                                goodsList:data.data.ordinary_p_list
-                            })
-                        })
+            .then(({data})=>{
+                this.setState({
+                    goods:data.data,
+                    orderList:data.data.floor,
+                    activeList:data.data.icons,
+                    goodsList:data.data.ordinary_p_list
+                })
+            })
     }
     componentDidMount(){
         this.getGoods();
