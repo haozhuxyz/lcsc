@@ -1,5 +1,5 @@
 import React from 'react';
-export default class Shop extends React.Component{
+class Shop extends React.Component{
     render(){
         return (
             <div>
@@ -8,3 +8,4 @@ export default class Shop extends React.Component{
         )
     }
 }
+export default Shop

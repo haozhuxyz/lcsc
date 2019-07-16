@@ -1,0 +1,25 @@
+.ShopDetailgoodspic{
+    display: inline-block;
+    width:35%;
+    height:8rem;
+    float:left
+}
+.ShopDetailgoodspic img{
+    width:8rem;
+    height:8rem;
+    float:left
+}
+.ShopDetailgoodsFont{
+    height:8rem;
+    display: inline-block;
+    float:right;
+    width:65%;
+}
+.ShopDetailwrap{
+    width:100%;
+}
+.ShopDetailgoodswrap{
+    width:100%;
+    height:9rem;
+    margin-top:.5rem
+}
