@@ -1,0 +1,94 @@
+.rewrap{
+    width: 100%;
+
+}
+.rehead{
+    width: 100%;
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 15px;
+
+}
+.rehead img{
+    height: 26px;
+}
+.rehead span{
+    font-size: 16px;
+    color:#333;
+}
+.remain{
+    width: 100%;
+    min-height: 100px;
+    border-top: 1px solid #ccc;
+}
+.account,.pwd{
+    width: 100%;
+    box-sizing: border-box;
+    height: 54px;
+    padding: 0 15px;
+    margin: 13px 0;
+    background: #f3f3f3;
+    display: flex;
+
+
+}
+
+.account input,.pwd input{
+    flex: 1;
+    border: none;
+    background: #f3f3f3;
+    height: 50px;
+}
+.account input{
+    text-indent: 15px;
+}
+.account span,.pwd span{
+    height: 32px;
+    width: 32px;
+    margin-top: 11px;
+
+}
+.account span{
+    background: url("../img/acc1.png") no-repeat;
+    background-size: cover;
+}
+.pwd span{
+    background: url("../img/pw1.png") no-repeat;
+    background-size: cover;
+}
+.zc{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    padding: 0 16px;
+    margin-top: 15px;
+
+}
+.zc input{
+    border: none;
+    background: #0f69dc;
+    color:#fff;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.jg{
+    height: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+
+
+}
+.jg span{
+    font-size: 14px;
+    line-height: 20px;
+    color:#ff4d51;
+    visibility: hidden;
+}

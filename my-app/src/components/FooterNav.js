@@ -17,7 +17,14 @@ import mf2 from "../assets/img/mf2.png"
 import mf3 from "../assets/img/mf3.png"
 import mf4 from "../assets/img/mf4.png"
 class FooterNav extends React.Component{
+    constructor(props){
+        super(props)
+        this.state={
+            display:"block"
+        }
+    }
     render(){
+
       return (
 
 
@@ -69,6 +76,11 @@ class FooterNav extends React.Component{
 
       );
     }
+
+
+
+
+
   }
   
   export default FooterNav;

@@ -7,13 +7,16 @@ import './assets/css/reset.css'
 import FooterNav from "./components/FooterNav"
 
 
+
 class App extends React.Component{
     constructor(){
         super();
 
     }
 
+
   render(){
+
     return (
       <div className="App">
 
@@ -22,6 +25,12 @@ class App extends React.Component{
       </div>
     );
   }
+
+
+
+
+
+
 }
 
 export default App;

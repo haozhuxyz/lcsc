@@ -1,0 +1,106 @@
+i{
+    font-style: normal;
+}
+.lowrap{
+    width: 100%;
+
+}
+.loheader{
+    width: 100%;
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 0 15px;
+
+}
+.loheader span{
+    font-size: 16px;
+    color:#333;
+}
+.loheader img{
+    height: 26px;
+}
+.lomain{
+    width:100%;
+    height: 350px;
+}
+.lo{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.lo img{
+    width: 110px;
+    height: 110px;
+}
+.password,.loaccount{
+    box-sizing: border-box;
+    height: 45px;
+    padding: 0 30px;
+    margin: 16px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+}
+.loaccount img,.password img{
+    width: 45px;
+    height: 45px;
+}
+.loaccount input,.password input{
+    flex: 1;
+    border: none;
+    background: #f4f4f4;
+    text-indent: 18px;
+
+
+}
+.lolink{
+    height: 60px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#4378fd;
+    font-size: 12px;
+
+
+}
+
+.dl{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 30px;
+}
+.dl input{
+    width: 100%;
+    border: none;
+    background: #4378fd;
+    border-radius: 5px;
+    font-size: 16px;
+    color:#ccc;
+}
+.warn{
+    height: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+
+
+}
+.warn span{
+    font-size: 14px;
+    line-height: 20px;
+    color:#ff4d51;
+    visibility: hidden;
+}

@@ -16,6 +16,11 @@ import bz from "../assets/img/bz.png"
 class My extends React.Component{
     constructor(props){
         super(props)
+        this.state={
+            isLogin : 0,
+            userName:","
+
+        }
 
     }
 
@@ -29,7 +34,23 @@ class My extends React.Component{
     goCar(){
         this.props.history.push("cart")
     }
+    goLogout(){
+
+        this.props.history.push("login")
+
+    }
+    componentWillMount(){
+        //console.log("componentWillMount")
+        if(localStorage.lcuserName&&localStorage.lcpwd){
+            this.setState({
+                isLogin : 1,
+                userName:localStorage.lcuserName,
+
+            })
+        }
+    }
     render(){
+
         return (
 
             <div className="my">
@@ -48,7 +69,8 @@ class My extends React.Component{
                <div className={"main"}>
                    <div className={"mybanner"}>
                        <span><img src={mylogo} alt=""/></span>
-                       <p onClick={this.goLogin.bind(this)}><i>你好</i><i>,</i><i>请登录</i></p>
+                       <p style={{display:this.state.isLogin?"none":"block"}} onClick={this.goLogin.bind(this)}><i>你好</i><i>,</i><i>请登录</i></p>
+                       <p style={{display:this.state.isLogin?"block":"none"}}><i>你好</i><b>&nbsp;</b><i>{this.state.userName}</i><b>&nbsp;</b><i onClick={this.goLogout.bind(this)}>退出</i></p>
 
                    </div>
 
