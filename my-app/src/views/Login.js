@@ -24,7 +24,7 @@ export default class Login extends React.Component{
         //console.log(this.refs.userName.value)
         //console.log(localStorage.lcuserName)
 
-        if(this.refs.userName.value===localStorage.lcuserName&&this.refs.pwd.value===localStorage.lcpwd){
+        if(this.refs.userName.value===localStorage.lcuserName&&this.refs.pwd.value===localStorage.lcpwd&&this.refs.userName.value){
             console.log("正确")
             this.refs.warn.style.visibility="hidden"
             this.props.history.push("/")

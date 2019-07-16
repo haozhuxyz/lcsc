@@ -39,6 +39,7 @@ class FooterNav extends React.Component{
                       <Route path={"/register"} component={Register}></Route>
 
 
+
                       <div className={"footer"}>
 
                           <NavLink style={{background:"#606063"}} activeStyle={{background:"#3c3e46"}} to={"/"} exact >

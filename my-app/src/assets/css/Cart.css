@@ -1,0 +1,50 @@
+.cawrap{
+    width: 100%;
+
+}
+.caheader{
+    width: 100%;
+    height: 44px;
+    background: #3c3e46;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 15px;
+    position: fixed;
+    top:0;
+    left: 0;
+
+
+
+}
+.caheader span{
+    font-size: 16px;
+    color:#fff;
+
+}
+.caheader img{
+    height: 26px;
+}
+.camain{
+    display: flex;
+    margin-top: 44px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+}
+.camain p{
+    color:#999;
+    font-size: 16px;
+
+}
+.camain p a{
+    color: deepskyblue;
+    font-size: 16px;
+}
+
+
+.cartmain{
+    width: 100%;
+    margin-top: 44px;
+}
