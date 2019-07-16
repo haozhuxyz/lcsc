@@ -3,6 +3,7 @@ import Classify from "../views/Classify"
 import Cart from "../views/Cart"
 import My from "../views/My"
 import Detail from "../views/Detail"
+import DetailShop from "../views/ShopDetail"
 
 export default [
     {
@@ -32,6 +33,12 @@ export default [
     {
         path:"/Detail/:id",
         component:Detail,
+        name:'详情页',
+        exact:false
+    },
+    {
+        path:"/DetailShop/:id",
+        component:DetailShop,
         name:'详情页',
         exact:false
     }

@@ -35,7 +35,7 @@ class Home extends React.Component{
                                 {
                                     v.recmmd_product_list.map((m,i)=>{
                                         return (
-                                            <div key={i} className="goods"  onClick={()=>this.routerTo(v)}>
+                                            <div key={i} className="goods"  onClick={()=>this.routerTo(m)}>
                                                 <img src={m.img_url} alt=""></img>
                                                 <h4>{m.title}</h4>
                                             </div>
@@ -47,7 +47,7 @@ class Home extends React.Component{
                                         v.brand.map((a,b)=>{
                                             return (
                                                 <span key={b}>
-                                                    <span className="goodsFont">{a.name}</span>
+                                                    <span className="goodsFont" onClick={()=>this.routerGoShop(a)}>{a.name}</span>
                                                 </span>
                                             )
                                         })
@@ -62,7 +62,7 @@ class Home extends React.Component{
                 {
                     this.state.goodsList.map((v,index)=>{
                         return (
-                            <div key={index} className="goodsList">
+                            <div key={index} className="goodsList" onClick={()=>this.routerTo(v)}>
                                 <h3>{v.title}</h3>
                                 <img src={v.img_url} alt=""></img>
                                 <p>{v.business_name}</p>
@@ -88,7 +88,13 @@ class Home extends React.Component{
         this.getGoods();
     }
     routerTo(v) {
-        this.props.history.push({pathname: `/Detail/${v.floor_id}`})
+        this.props.history.push({pathname: `/Detail/${v.product_id}`,state:{data: v}})
+    }
+    routerGo(v) {
+        this.props.history.push({pathname: `/Detail/${v.product_id}`,state:{data: v}})
+    }
+    routerGoShop(v) {
+        this.props.history.push({pathname: `/DetailShop/${v.brand_id}`,state:{data: v}})
     }
 }
 

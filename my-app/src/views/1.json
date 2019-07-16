@@ -1,0 +1,239 @@
+{
+    "error_no": 0,
+    "error_msg": "success",
+    "is_login": false,
+    "data": {
+        "p_title": "商品列表",
+        "had_sx": false,
+        "sxstr": "",
+        "cfid": "",
+        "cid": "",
+        "list": [{
+            "product_id": "48129",
+            "title": "拜耳科特壮",
+            "img_url": "https:\/\/staticpic.linkpet.com.cn\/\/upload\/product\/2017-11-25\/5a190c2046927.jpg",
+            "price": "85.00",
+            "business_name": "北京广德福森商贸有限公司",
+            "activity_category": null,
+            "activity_id": null,
+            "state": null,
+            "start_time": null,
+            "end_time": null,
+            "showprice": "200.00",
+            "min_sale_num": "1",
+            "business_id": "452",
+            "title_secondary": "提高宠物抵抗力",
+            "stock": "0",
+            "activity_price": null,
+            "product_num": null,
+            "limit_num": null
+        }, {
+            "product_id": "49647",
+            "title": "俄版拜有利100ml",
+            "img_url": "https:\/\/staticpic.linkpet.com.cn\/\/upload\/product\/2018-01-12\/5a5866b9239b9.jpg",
+            "price": "65.00",
+            "business_name": "北京广德福森商贸有限公司",
+            "activity_category": null,
+            "activity_id": null,
+            "state": null,
+            "start_time": null,
+            "end_time": null,
+            "showprice": "150.00",
+            "min_sale_num": "1",
+            "business_id": "452",
+            "title_secondary": "犬猫通用5%拜有利针剂100ml",
+            "stock": "0",
+            "activity_price": null,
+            "product_num": null,
+            "limit_num": null
+        }, {
+            "product_id": "56840",
+            "title": "猫拜耳 24粒\/盒",
+            "img_url": "https:\/\/staticpic.linkpet.com.cn\/\/upload\/coupon\/2016-10-24\/580de29394f6f.jpg",
+            "price": "200.00",
+            "business_name": "北京广德福森商贸有限公司",
+            "activity_category": null,
+            "activity_id": null,
+            "state": null,
+            "start_time": null,
+            "end_time": null,
+            "showprice": "1000.00",
+            "min_sale_num": "1",
+            "business_id": "452",
+            "title_secondary": "猫体内驱虫药",
+            "stock": "0",
+            "activity_price": null,
+            "product_num": null,
+            "limit_num": null
+        }, {
+            "product_id": "56842",
+            "title": "德国拜耳拜宠清宠物狗狗体内驱虫幼犬小泰迪金毛驱虫药打虫片整盒",
+            "img_url": "https:\/\/staticpic.linkpet.com.cn\/\/upload\/banner\/2018-12-28\/5c25a2899ab0f.jpg",
+            "price": "80.00",
+            "business_name": "北京广德福森商贸有限公司",
+            "activity_category": null,
+            "activity_id": null,
+            "state": null,
+            "start_time": null,
+            "end_time": null,
+            "showprice": "120.00",
+            "min_sale_num": "1",
+            "business_id": "452",
+            "title_secondary": "狗狗体内驱虫幼犬小泰迪金毛驱虫药",
+            "stock": "0",
+            "activity_price": null,
+            "product_num": null,
+            "limit_num": null
+        }],
+        "active_goods": null,
+        "offset": 20,
+        "limit": "20",
+        "hasmore": false,
+        "order": "",
+        "sx": "",
+        "brand": [{
+            "brand_id": "69",
+            "name": "哈药",
+            "sx_name": "HY",
+            "logo": "https:\/\/staticpic.linkpet.com.cn\/\/upload\/coupon\/2016-08-30\/57c4f8667e5dc.jpg",
+            "add_time": "2016-05-27 10:44:51",
+            "brand_type_id": "9"
+        }, {
+            "brand_id": "70",
+            "name": "英国V霸V-Power",
+            "sx_name": "YGWB",
+            "logo": "https:\/\/staticpic.linkpet.com.cn\/\/upload\/coupon\/2016-08-30\/57c4fd10ceb6a.jpg",
+            "add_time": "2016-05-27 10:46:12",
+            "brand_type_id": "10"
+        }, {
+            "brand_id": "71",
+            "name": "西班牙SYVA",
+            "sx_name": "SYVA",
+            "logo": "https:\/\/staticpic.linkpet.com.cn\/\/upload\/coupon\/2016-08-30\/57c4ff7b86a2c.jpg",
+            "add_time": "2016-05-27 10:47:13",
+            "brand_type_id": "10"
+        }, {
+            "brand_id": "72",
+            "name": "法国威隆",
+            "sx_name": "FGVL",
+            "logo": "https:\/\/staticpic.linkpet.com.cn\/\/upload\/coupon\/2016-08-30\/57c4f7270c84e.png",
+            "add_time": "2016-05-27 10:47:37",
+            "brand_type_id": "10"
+        }, {
+            "brand_id": "73",
+            "name": "台湾宝昕",
+            "sx_name": "TWBX",
+            "logo": "https:\/\/staticpic.linkpet.com.cn\/\/upload\/coupon\/2016-09-09\/57d228ef0fdcd.png",
+            "add_time": "2016-05-27 10:47:58",
+            "brand_type_id": "10"
+        }, {
+            "brand_id": "74",
+            "name": "美国纽崔玛氏",
+            "sx_name": "NCMS",
+            "logo": "https:\/\/staticpic.linkpet.com.cn\/\/upload\/coupon\/2016-12-12\/584e5bc42dc0c.png",
+            "add_time": "2016-05-27 10:48:42",
+            "brand_type_id": "10"
+        }, {
+            "brand_id": "75",
+            "name": "韩国瑞必诊",
+            "sx_name": "HGRBZ",
+            "logo": "https:\/\/staticpic.linkpet.com.cn\/\/upload\/coupon\/2016-08-30\/57c53c881af70.png",
+            "add_time": "2016-05-27 10:48:51",
+            "brand_type_id": "10"
+        }, {
+            "brand_id": "76",
+            "name": "韩国安捷",
+            "sx_name": "HGAJ",
+            "logo": "https:\/\/staticpic.linkpet.com.cn\/\/upload\/coupon\/2016-09-09\/57d22bac4a736.png",
+            "add_time": "2016-05-27 10:49:02",
+            "brand_type_id": "10"
+        }, {
+            "brand_id": "77",
+            "name": "博莱得利",
+            "sx_name": "BLDL",
+            "logo": "https:\/\/staticpic.linkpet.com.cn\/\/upload\/coupon\/2016-08-30\/57c53c01714f9.png",
+            "add_time": "2016-05-27 10:49:24",
+            "brand_type_id": "9"
+        }, {
+            "brand_id": "78",
+            "name": "圣玛利诺",
+            "sx_name": "SMLN",
+            "logo": "https:\/\/staticpic.linkpet.com.cn\/\/upload\/coupon\/2016-09-09\/57d22ccdbe43b.png",
+            "add_time": "2016-05-27 10:50:45",
+            "brand_type_id": "10"
+        }, {
+            "brand_id": "80",
+            "name": "台湾BASO",
+            "sx_name": "BS",
+            "logo": "https:\/\/staticpic.linkpet.com.cn\/\/upload\/coupon\/2016-09-01\/57c79a0b1d35c.jpg",
+            "add_time": "2016-05-27 10:58:13",
+            "brand_type_id": "10"
+        }, {
+            "brand_id": "81",
+            "name": "英国Botanica",
+            "sx_name": "Botanica",
+            "logo": "https:\/\/staticpic.linkpet.com.cn\/\/upload\/coupon\/2016-12-12\/584e5c3cb4d38.png",
+            "add_time": "2016-05-27 10:58:47",
+            "brand_type_id": "10"
+        }, {
+            "brand_id": "82",
+            "name": "德国勃林格殷格翰",
+            "sx_name": "DE.BLGYGH",
+            "logo": "https:\/\/staticpic.linkpet.com.cn\/\/upload\/coupon\/2016-08-30\/57c559f0b0a9a.jpg",
+            "add_time": "2016-05-27 10:59:21",
+            "brand_type_id": "10"
+        }, {
+            "brand_id": "83",
+            "name": "美国Amneal",
+            "sx_name": "Amneal",
+            "logo": "",
+            "add_time": "2016-05-27 11:00:43",
+            "brand_type_id": "10"
+        }, {
+            "brand_id": "84",
+            "name": "瑞士诺华",
+            "sx_name": "NH",
+            "logo": "https:\/\/staticpic.linkpet.com.cn\/\/upload\/coupon\/2016-08-30\/57c530343878f.jpg",
+            "add_time": "2016-05-27 11:01:05",
+            "brand_type_id": "10"
+        }, {
+            "brand_id": "86",
+            "name": "美国VEDCO",
+            "sx_name": "VEDCO",
+            "logo": "",
+            "add_time": "2016-05-27 11:06:41",
+            "brand_type_id": "10"
+        }, {
+            "brand_id": "89",
+            "name": "康牧",
+            "sx_name": "KM",
+            "logo": "https:\/\/staticpic.linkpet.com.cn\/\/upload\/coupon\/2016-09-21\/57e17869ad9cc.jpg",
+            "add_time": "2016-05-27 11:11:41",
+            "brand_type_id": "9"
+        }, {
+            "brand_id": "90",
+            "name": "英国VETORYL",
+            "sx_name": "VETORYL",
+            "logo": "",
+            "add_time": "2016-05-27 11:14:11",
+            "brand_type_id": "10"
+        }, {
+            "brand_id": "91",
+            "name": "美国希尔斯",
+            "sx_name": "XES.US",
+            "logo": "https:\/\/staticpic.linkpet.com.cn\/\/upload\/coupon\/2016-08-30\/57c53d7676d84.jpg",
+            "add_time": "2016-05-27 11:15:06",
+            "brand_type_id": "10"
+        }, {
+            "brand_id": "93",
+            "name": "赛诺菲",
+            "sx_name": "SNF",
+            "logo": "https:\/\/staticpic.linkpet.com.cn\/\/upload\/coupon\/2016-12-15\/585203954657d.png",
+            "add_time": "2016-05-27 11:17:59",
+            "brand_type_id": "10"
+        }],
+        "attribute": null,
+        "detail": null,
+        "cart_num": 4
+    }
+}
