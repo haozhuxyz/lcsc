@@ -52,7 +52,7 @@ class App extends React.Component{
           {
             router.map((v,i)=>{
               return(
-                <Route {...v}></Route>
+                <Route key={i} {...v}></Route>
               )
             })
           }

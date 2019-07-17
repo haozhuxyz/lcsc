@@ -1,1 +1,7 @@
-export const classify = [];
+export const classify = {
+    list:[],
+    shopList:{
+        cate:[],
+        brand:[]
+    }
+};
