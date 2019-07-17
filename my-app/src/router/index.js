@@ -6,6 +6,7 @@ import Detail from "../views/Detail"
 import DetailShop from "../views/ShopDetail"
 import Login from "../views/Login"
 import Register from "../views/Register"
+import ClassifyShopList from "../views/ClassifyShopList"
 export default [
     {
         path:"/Home",
@@ -17,7 +18,7 @@ export default [
         path:"/Classify",
         component:Classify,
         name:'分类',
-        exact:false
+        exact:true
     },
     {
         path:"/Cart",
@@ -55,4 +56,10 @@ export default [
         name:'注册',
         exact:false
     },
+    {
+        path:"/ClassifyShopList",
+        component:ClassifyShopList,
+        name:'商品列表',
+        exact:false
+    }
 ]

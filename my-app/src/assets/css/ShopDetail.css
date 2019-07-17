@@ -1,25 +1,104 @@
-.ShopDetailgoodspic{
-    display: inline-block;
-    width:35%;
-    height:8rem;
-    float:left
+p {
+    margin: 0;
+    padding: 0;
 }
-.ShopDetailgoodspic img{
-    width:8rem;
-    height:8rem;
-    float:left
+
+.ShopDetailwrap {
+    width: 100%;
+    overflow: hidden;
 }
-.ShopDetailgoodsFont{
-    height:8rem;
-    display: inline-block;
-    float:right;
-    width:65%;
+
+.top_a {
+    background: #f3f3f3;
+    height: 42px;
+    border-bottom: 1px solid #d7d7d7;
 }
-.ShopDetailwrap{
-    width:100%;
+
+.top_a img {
+    position: absolute;
+    left: 0;
+    height: 42px;
+
 }
-.ShopDetailgoodswrap{
-    width:100%;
-    height:9rem;
-    margin-top:.5rem
+
+.nav_a {
+    height: 40px;
+    border-bottom: 1px solid #ececec;
+}
+
+.nav_a li {
+    float: left;
+    width: 20%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.ShopDetailgoodswrap {
+    display: flex;
+    height: 100px;
+    padding: 10px;
+}
+
+.ShopDetailgoodspic {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.ShopDetailgoodspic img {
+    height: 100px;
+    width: 100px;
+}
+
+.ShopDetailgoodsFont {
+    text-align: left;
+    width: 200px;
+    position: relative;
+}
+
+.shop_title {
+    height: 66px;
+}
+
+.shop_name {
+    color: #212121;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.second_name {
+    font-size: 14px;
+    color: #fb6104;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.shop_price {
+    line-height: 14px;
+    position: relative;
+    color: #a9abaa;
+    font-size: 14px;
+}
+
+.shop_city {
+    width: 150px;
+    margin-top: 5px;
+    line-height: 12px;
+    position: relative;
+    color: #8e8e8e;
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.ShopDetailgoodsFont img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 35px;
 }

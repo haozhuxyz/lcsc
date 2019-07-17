@@ -37,7 +37,11 @@ class Classify extends React.Component{
                                         <dt>{v.name}</dt>
                                         {v.cate.map(v=>{
                                             return(
-                                                <dd key={v.category_id}>
+                                                <dd key={v.category_id} onClick={
+                                                    ()=>{
+                                                        this.props.history.push({pathname: `/ClassifyShopList`,state:{data: v}});
+                                                    }
+                                                }>
                                                     {v.name}
                                                 </dd>
                                             )
@@ -50,7 +54,9 @@ class Classify extends React.Component{
                             this.props.classify.shopList.brand.map(v=>{
                                 return(
                                     <div  key={v.brand_id} className='v-r-img'>
-                                        <img src={v.logo}/>
+                                        <img src={v.logo} onClick={()=>{
+                                            this.props.history.push({pathname: `/DetailShop/${v.brand_id}`,state:{data: v}})
+                                        }}/>
                                     </div>
                                 )
                             })
@@ -75,7 +81,7 @@ function mapDispatchToProps(dispatch){
     return {
         getClassifyList(){
             dispatch((dispatch)=>{
-                axios.get("https://www.linkpet.com.cn/Mobile/Index/product_category")
+                axios.get("/proxy/Index/product_category")
                 .then(({data})=>{
                     dispatch({
                         type:'CHANGE_CLASSIFYLIST',
@@ -88,7 +94,7 @@ function mapDispatchToProps(dispatch){
         },
         getClassifyShopList(_id = '33'){
             dispatch((dispatch)=>{
-                axios.get("https://www.linkpet.com.cn/Mobile/Index/product_category")
+                axios.get("/proxy/Index/product_category")
                 .then(({data})=>{
                     dispatch({
                         type:'CHANGE_CLASSIFTSHOPLIST',

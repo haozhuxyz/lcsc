@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import axios from "axios"
+
 import "../assets/css/ShopDetail.css"
+import Arrow from "../assets/img/black_zjt.png";
+import blueCart from "../assets/img/blueCart.png";
 
 class ShopDetail extends Component {
     constructor(props) {
@@ -8,31 +11,47 @@ class ShopDetail extends Component {
         this.list = props.location.state.data
         this.state={
             brand_id : this.list.brand_id,
-            goodsList:[]
+            goodsList:[],
+            judge:false
         }
     }
     render() {
         if(this.state.goodsList){
             return (
                 <div className="ShopDetailwrap">
-                    <button onClick={this.confirm}>返回</button>
-                    <p>商店列表</p>
-                    {
-                        this.state.goodsList.map((v,i)=>{
-                            return (
-                                <div key={i} className="ShopDetailgoodswrap" onClick={()=>this.routerTo(v)}>
-                                    <div className="ShopDetailgoodspic">
-                                        <img src={v.img_url} alt=""></img>
+                    <div className='top_a'>
+                        <img src={Arrow} onClick={()=>{this.props.history.go(-1)}}/>
+                        top
+                    </div>
+                    <ul className="nav_a">
+                        <li>默认</li>
+                        <li>人气</li>
+                        <li>价格</li>
+                        <li>销量</li>
+                        <li>筛选</li>
+                    </ul>
+                    <div className="view_1" >
+                        {
+                            this.state.goodsList.map((v,i)=>{
+                                return (
+                                    <div key={i} className="ShopDetailgoodswrap" onClick={()=>this.routerTo(v)}>
+                                        <div className="ShopDetailgoodspic">
+                                            <img src={v.img_url} alt=""></img>
+                                        </div>
+                                        <div className="ShopDetailgoodsFont">
+                                            <div className="shop_title">
+                                                <p className='shop_name'>{v.title}</p>
+                                                <p className='second_name'>{v.title_secondary}</p>
+                                            </div>
+                                            <p className='shop_price'>{this.state.judge?'￥'+v.price:'登录显示价格'}</p>
+                                            <p className='shop_city'>{v.business_name}</p>
+                                            <img src={blueCart}/>
+                                        </div>
                                     </div>
-                                    <div className="ShopDetailgoodsFont">
-                                        <p>{v.title}</p>
-                                        <p>{v.business_name}</p>
-                                        <span>价格：{v.price}元</span>
-                                    </div>
-                                </div>
-                            )
-                        })
-                    }
+                                )
+                            })
+                        }
+                    </div>
                 </div>
             )
         }
@@ -51,7 +70,7 @@ class ShopDetail extends Component {
         this.props.history.go(-1)
     }
     getList(){
-        axios.get("https://www.linkpet.com.cn/Mobile/Product?brand_id="+this.state.brand_id)
+        axios.get("/proxy/Product?brand_id="+this.state.brand_id)
             .then(({data})=>{
                 console.log(1111,data)
                 this.setState({
