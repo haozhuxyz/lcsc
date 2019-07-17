@@ -12,7 +12,7 @@ class Classify extends React.Component{
         return (
             <div className='classify'>
                 <div className='top'>
-                    <img src={Arrow}/>
+                    <img src={Arrow} onClick={()=>{this.props.history.go(-1)}}/>
                     <span>分类</span>
                 </div>
                 <div className='view'>

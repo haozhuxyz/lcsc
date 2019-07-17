@@ -12,28 +12,40 @@ class ShopDetail extends Component {
         }
     }
     render() {
-        return (
-            <div className="ShopDetailwrap">
-                <button onClick={this.confirm}>返回</button>
-                <p>商店列表</p>
-                {
-                    this.state.goodsList.map((v,i)=>{
-                        return (
-                            <div key={i} className="ShopDetailgoodswrap" onClick={()=>this.routerTo(v)}>
-                                <div className="ShopDetailgoodspic">
-                                    <img src={v.img_url} alt=""></img>
+        if(this.state.goodsList){
+            return (
+                <div className="ShopDetailwrap">
+                    <button onClick={this.confirm}>返回</button>
+                    <p>商店列表</p>
+                    {
+                        this.state.goodsList.map((v,i)=>{
+                            return (
+                                <div key={i} className="ShopDetailgoodswrap" onClick={()=>this.routerTo(v)}>
+                                    <div className="ShopDetailgoodspic">
+                                        <img src={v.img_url} alt=""></img>
+                                    </div>
+                                    <div className="ShopDetailgoodsFont">
+                                        <p>{v.title}</p>
+                                        <p>{v.business_name}</p>
+                                        <span>价格：{v.price}元</span>
+                                    </div>
                                 </div>
-                                <div className="ShopDetailgoodsFont">
-                                    <p>{v.title}</p>
-                                    <p>{v.business_name}</p>
-                                    <span>价格：{v.price}元</span>
-                                </div>
-                            </div>
-                        )
-                    })
-                }
-            </div>
-        )
+                            )
+                        })
+                    }
+                </div>
+            )
+        }
+        else{
+            return (
+                <div className="ShopDetailwrap">
+                    <button onClick={this.confirm}>返回</button>
+                    <p>商店列表</p>
+                    <div>商品未找到</div>
+                </div>
+            )
+        }
+       
     }
     confirm = () =>{
         this.props.history.go(-1)
