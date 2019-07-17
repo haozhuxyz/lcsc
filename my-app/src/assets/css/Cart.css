@@ -27,13 +27,15 @@
     height: 26px;
 }
 .camain{
-    display: flex;
+
     margin-top: 44px;
-    height: 400px;
+    display: flex;
+    height: 300px;
     justify-content: center;
     align-items: center;
 }
 .camain p{
+    margin-top: 240px;
     color:#999;
     font-size: 16px;
 
@@ -47,4 +49,141 @@
 .cartmain{
     width: 100%;
     margin-top: 44px;
+}
+
+.cart_h{
+    box-sizing: border-box;
+    width: 100%;
+    height: 44px;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart_h .check_all{
+    width: 15px;
+    height: 15px;
+}
+.cart_h h3{
+    font-weight: normal;
+    font-size: 15px;
+}
+.cart_h span{
+    font-size: 12px;
+    color:#333;
+    margin-right: 20px;
+}
+.myshop{
+    width:100%;
+
+}
+.product_list{
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.input_check{
+    width: 20px;
+    height: 20px;
+}
+.input_check .pids{
+    width: 15px;
+    height: 15px;
+}
+.cart_goods_box{
+    flex: 1;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+.cart_goods_box a{
+    text-align: center;
+}
+.cart_goods_box img{
+    width: 40px;
+    height: 40px;
+    margin-left: 30px;
+}
+.buy_num_wrap{
+    width: 80px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.num_minus,.num_add{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    line-height: 20px;
+    text-align: center;
+
+}
+.buy_num{
+    line-height: 20px;
+    text-align: center;
+    margin: 10px;
+    font-size: 12px;
+}
+.cart_goods_box .product_name{
+    font-size: 14px;
+    color:#333;
+}
+.cart_goods_box .price{
+    font-size: 12px;
+    color:#999;
+}
+
+.mysum{
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 44px;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 20px;
+
+    border-top: 1px solid #ccc;
+}
+.money{
+    font-size: 18px;
+    color:#eb0909;
+    font-family: Arial;
+
+}
+.mysum span{
+    font-size: 12px;
+    color:#999;
+    margin-left: 20px;
+}
+.mysum b{
+    font-size: 14px;
+    color:#ff4d51;
+    margin-left: 8px;
+}
+.sumleft{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tj{
+    width: 140px;
+    height: 50px;
+    background: #ff4d51;
+    line-height: 50px;
+    text-align: center;
+    color:#fff;
+    font-size: 15px;
 }
