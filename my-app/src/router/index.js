@@ -3,7 +3,9 @@ import Classify from "../views/Classify"
 import Cart from "../views/Cart"
 import My from "../views/My"
 import Detail from "../views/Detail"
-
+import DetailShop from "../views/ShopDetail"
+import Login from "../views/Login"
+import Register from "../views/Register"
 export default [
     {
         path:"/Home",
@@ -34,5 +36,23 @@ export default [
         component:Detail,
         name:'详情页',
         exact:false
-    }
+    },
+    {
+        path:"/DetailShop/:id",
+        component:DetailShop,
+        name:'详情页',
+        exact:false
+    },
+    {
+        path:"/Login",
+        component:Login,
+        name:'登录',
+        exact:false
+    },
+    {
+        path:"/Register",
+        component:Register,
+        name:'注册',
+        exact:false
+    },
 ]

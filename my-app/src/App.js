@@ -13,13 +13,14 @@ import mf3 from "./assets/img/mf3.png"
 import mf4 from "./assets/img/mf4.png"
 import router from "./router/index"
 
+
 class App extends React.Component{
     constructor(){
         super();
-
     }
 
   render(){
+
     return (
       <div className="App">
         <Router>
@@ -60,6 +61,12 @@ class App extends React.Component{
       </div>
     )
   }
+
+
+
+
+
+
 }
 
 export default App
