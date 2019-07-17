@@ -138,6 +138,7 @@
 .wrap{
     padding-bottom: 3rem;
     background-color: #f4f4f4;
+    overflow: hidden
 }
 .head{
     background-color: #3c3e46;

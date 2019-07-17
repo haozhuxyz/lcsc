@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import "../assets/css/Detail.css"
 
 class Detail extends Component {
     constructor(props) {
@@ -6,13 +7,19 @@ class Detail extends Component {
         this.list = props.location.state.data
     }
     render() {
-        var list = {}
         return (
-            <div>
+            <div className="detailWrap">
+                <div className="detailTitle">
+                    <div onClick={this.confirm} className="detailGo">返回</div>
+                    <ul className="detailTitle_1">
+                        <li>商品</li>
+                        <li>详情</li>
+                    </ul>
+                </div>
                 <div>
-                    <button onClick={this.confirm}>返回</button>
-                    <p>详情页面</p>
-                    <img style={{width:"300px"}} src={this.list.img_url} alt=""></img>
+                    <div className="detailimg">
+                        <img className="detailimg_1" src={this.list.img_url} alt=""></img>
+                    </div>
                     <h2>{this.list.title}</h2>
                     <span>价格：{this.list.price}元</span>
                     <p>药效：{this.list.title_secondary}</p>
