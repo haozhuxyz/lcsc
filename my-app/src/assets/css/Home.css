@@ -1,16 +1,60 @@
 .goodsList{
     float: left;
-    margin-top: .08rem;
+    margin-top: .18rem;
     background: #fff;
     width: 48.925%;
     margin-left: 1.075%;
-    margin-bottom: .14rem;
+}
+.goodsList_1{
+    height: .4rem;
+    font-size: .24rem;
+    color: #a9abaa;
+    position: relative;
+    line-height: .4rem;
+    text-align: left;
+    padding-left: .1rem;
+    font-family: PingFangSC-Regular;
+}
+.goodsList_2{
+    line-height: .8rem;
+    height: .8rem;
+    border-top: .02rem dashed #f0f0f0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: .32rem;
+    color: #8e8e8e;
+    position: relative;
+    margin-top: .08rem;
+    text-align: left;
+    font-size: .34rem;
 }
 .activeList{
-    width: 20%;
+    margin-top:3.1rem;
+    width: 100%;
     text-align: center;
-    float: left;
     margin-bottom: .24rem;
+    min-height: 4.56rem;
+    border-bottom: .01rem solid #ececec;
+    background: #fff;
+    padding: .14rem .1rem .05rem;
+}
+.activeList_1{
+    width:20%;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: .24rem;
+}
+#activeList_1_img{
+    width: 2.7rem;
+    height: 2.7rem;
+    margin-bottom: .06rem;
+}
+.activeList_1_font{
+    font-family: \.PingFangSC-Regular;
+    font-size: .22rem;
+    color: #212121;
+    letter-spacing: 0;
 }
 .orderList{
     width: 100%;
@@ -19,11 +63,11 @@
     overflow: hidden;
 }
 .orderListTitle{
-    width: .52rem;
+    width: 1.1rem;
     float: left;
     text-align: center;
-    color: #000;
-    font-size: .26rem;
+    background: linear-gradient(-180deg,#3297ff,#fff);
+    font-size: .46rem;
 }
 .footerNav{
     height: .88rem;
@@ -40,9 +84,37 @@
     padding-top: .28rem;
     padding-bottom: .12rem;
 }
-.goods img{
-    width: 5rem;
-    height: 5rem;
+.goods_1{
+    width: 5.88rem;
+    height: 4.1rem;
+    padding-left: .52rem;
+    border-bottom: .01rem solid #ececec;
+    margin: 0 auto;
+}
+.goods_img{
+    width: 6rem;
+    height: 6rem;
+}
+.goods_font{
+    font-size: .38rem;
+    width: 86%;
+    margin: 0 auto;
+    text-align: left;
+    height: 2.64rem;
+    line-height: 1.34rem;
+    margin-top: .12rem;
+    color: #212121;
+    overflow: hidden;
+}
+.goods_span{
+    width: 100%;
+    margin: 0 auto;
+    color: #8e8e8e;
+    overflow: hidden;
+    margin-top: .04rem;
+    height: .56rem;
+    line-height: .28rem;
+    font-size: .24rem;
 }
 .goodsFont{
     display: inline-block;
@@ -66,4 +138,106 @@
 .wrap{
     padding-bottom: 3rem;
     background-color: #f4f4f4;
+}
+.head{
+    background-color: #3c3e46;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .4rem;
+    height: 2.88rem;
+    width: 100%;
+    text-align: center;
+    line-height: .88rem;
+    font-size: .32rem;
+    position: fixed;
+    top: 0;
+    box-sizing: border-box;
+    z-index: 99;
+}
+.head_1{
+    height: 1.5rem;
+    width: 3rem;
+    box-sizing: border-box;
+}
+#head_1_img{
+    width:100%;
+    height:100;
+    border:0;
+}
+.head_2{
+    height: 2.56rem;
+    line-height: 2.56rem;
+    position: relative;
+    margin: 0 .2rem;
+    width:220px;
+}
+#head_2_img{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    left: 0;
+    top: 0;
+    z-index: 9;
+}
+.head_2_input{
+    width: 100%;
+    height: 80%;
+    line-height: .56rem;
+    text-align: left;
+    border-radius: 1.12rem;
+    box-sizing: border-box;
+    padding: 0;
+    padding-left: 1.7rem;
+    font-size: .26rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.head_3{
+    text-align: center;
+    line-height: .88rem;
+    font-size: .32rem;
+}
+.active{
+    width: 100%;
+    background: #fff;
+    height: 1.46rem;
+    position: relative;
+    border-bottom: .01rem solid #f4f4f4;
+    margin-bottom: .16rem;
+}
+.active_1{
+    position: absolute;
+    padding-left: .16rem;
+    padding-right: .32rem;
+    margin-top: .14rem;
+    left: 0;
+    width: 4.4rem;
+}
+.active_2{
+    padding-right: .12rem;
+    margin-bottom: .04rem;
+    left: 4.84rem;
+    top: .16rem;
+    width: 1.32rem;
+    height: 1.32rem;
+    position: absolute;
+}
+.active_3{
+    position: absolute;
+    top: .2rem;
+    left: 7.24rem;
+    font-size: .24rem;
+    color: #727272;
+}
+.mainList{
+    width: 100%;
+    background: #fff;
+    margin-bottom: .2rem;
+    overflow: hidden;
+}
+.context{
+    width:100%;
 }
