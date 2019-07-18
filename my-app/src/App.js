@@ -15,12 +15,7 @@ import router from "./router/index"
 
 
 class App extends React.Component{
-    constructor(){
-        super();
-    }
-
   render(){
-
     return (
       <div className="App">
         <Router>
