@@ -13,7 +13,9 @@ class Detail extends Component {
             shop:[],
             all:{},
             img:[],
-            same_list:[]
+            same_list:[],
+            detailOne:[],
+            display_name:"block",
         }
     }
     render() {
@@ -22,11 +24,11 @@ class Detail extends Component {
                 <div className="detailTitle">
                     <div onClick={this.confirm} className="detailGo">返回</div>
                     <ul className="detailTitle_1">
-                        <li>商品</li>
-                        <li>详情</li>
+                        <li onClick={this.display_block.bind(this)}>商品</li>
+                        <li onClick={this.display_none.bind(this)}>详情</li>
                     </ul>
                 </div>
-                <div>
+                <div style={{display:this.state.display_name}}>
                     <div className="detailimg">
                         <img className="detailimg_1" src={this.list.img_url} alt=""></img>
                     </div>
@@ -53,6 +55,21 @@ class Detail extends Component {
                             <span>(客服上班时间:{this.state.shop.support_b_time}-{this.state.shop.support_e_time})</span>
                         </div>
                     </div>
+                </div>
+                <div className="detailOne">
+                    <div className="detailInfo_1">规格参数</div>
+                    <ul className="detailOne_1">
+                        {
+                            this.state.detailOne.map((v,i)=>{
+                                return(
+                                    <li key={i} className="detailOne_2">
+                                        <div className="detailOne_L">{v.name}</div>
+                                        <div className="detailOne_R">{v.m_value}</div>
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
                 </div>
                 <div className="detailInfo">
                     <div className="detailInfo_1">产品详情</div>
@@ -90,6 +107,16 @@ class Detail extends Component {
             </div>
         )
     }
+    display_none() {
+        this.setState({
+            display_name: 'none',
+        })
+    }
+    display_block() {
+        this.setState({
+            display_name: 'block',
+        })
+    }
     getGoods() {
         axios.get("/proxy/Product/productDetail/ProductDetail?id="+this.state.product_id)
             .then(({data})=>{
@@ -99,7 +126,8 @@ class Detail extends Component {
                     info:data.data.info,
                     shop:data.data.shop,
                     img:data.data.img,
-                    same_list:data.data.same_list
+                    same_list:data.data.same_list,
+                    detailOne:data.data.attribute
                 })
             })
     }
@@ -112,9 +140,6 @@ class Detail extends Component {
     routerTo(v) {
         this.props.history.push({pathname: `/Detail/${v.product_id}`,state:{data: v}});
         this.props.history.go(0)
-    }
-    update(){
-        this.forceUpdate(); 
     }
 }
 
