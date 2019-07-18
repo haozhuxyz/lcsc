@@ -2,8 +2,11 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   NavLink,
-  Route
+  Route,
+    withRouter
 } from "react-router-dom"
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
 import Home from "../views/Home"
 import Classify from "../views/Classify"
@@ -16,73 +19,67 @@ import mf1 from "../assets/img/mf1.png"
 import mf2 from "../assets/img/mf2.png"
 import mf3 from "../assets/img/mf3.png"
 import mf4 from "../assets/img/mf4.png"
+
+
 class FooterNav extends React.Component{
     constructor(props){
         super(props)
-        this.state={
-            display:"block"
-        }
+
     }
     render(){
+        let hideFooter = null;
+        const { location: { pathname } } = this.props
+        const hideFooterPath = ['/login', '/register','/detail','/detailshop','/classifyshoplist']
+        //const hideFooter = hideFooterPath.includes(pathname.trim())
+        //console.log(pathname.toLowerCase())
+        for(let i=0;i<hideFooterPath.length;i++){
+            if((pathname.trim()).toLowerCase().indexOf(hideFooterPath[i].toLowerCase())!==-1){
+                hideFooter=true;
 
-      return (
+            }
+        }
+
+        if(hideFooter){
+            return null
+        }else{
+            return (
 
 
+                <div className={"footer"}>
 
-                  <Router>
-
-                      <Route path={"/"} exact component={Home}></Route>
-                      <Route path={"/Classify"} component={Classify}></Route>
-                      <Route path={"/Cart"} component={Cart}></Route>
-                      <Route path={"/My"} component={My}></Route>
-                      <Route path={"/login"} component={Login}></Route>
-                      <Route path={"/register"} component={Register}></Route>
-
-
-
-                      <div className={"footer"}>
-
-                          <NavLink style={{background:"#606063"}} activeStyle={{background:"#3c3e46"}} to={"/"} exact >
-                              <img src={mf1} alt=""/>
-                              <span>
+                    <NavLink style={{background:"#606063"}} activeStyle={{background:"#3c3e46"}} to={"/"} exact >
+                        <img src={mf1} alt=""/>
+                        <span>
                                   首页
                               </span>
-                          </NavLink>
-                          <NavLink style={{background:"#606063"}} activeStyle={{background:"#3c3e46"}} to={"/Classify"}>
-                              <img src={mf2} alt=""/>
-                              <span>
+                    </NavLink>
+                    <NavLink style={{background:"#606063"}} activeStyle={{background:"#3c3e46"}} to={"/Classify"}>
+                        <img src={mf2} alt=""/>
+                        <span>
                                   分类
                               </span>
-                          </NavLink>
-                          <NavLink style={{background:"#606063"}} activeStyle={{background:"#3c3e46"}} to={"/Cart"}>
-                              <img src={mf3} alt=""/>
-                             <span>
+                    </NavLink>
+                    <NavLink style={{background:"#606063"}} activeStyle={{background:"#3c3e46"}} to={"/Cart"}>
+                        <img src={mf3} alt=""/>
+                        <span>
                                   购物车
                              </span>
-                          </NavLink>
-                          <NavLink style={{background:"#606063"}} activeStyle={{background:"#3c3e46"}} to={"/My"}>
-                              <img src={mf4} alt=""/>
-                              <span>
+                    </NavLink>
+                    <NavLink style={{background:"#606063"}} activeStyle={{background:"#3c3e46"}} to={"/My"}>
+                        <img src={mf4} alt=""/>
+                        <span>
                                   个人中心
                               </span>
 
-                          </NavLink>
-                      </div>
+                    </NavLink>
+                </div>
 
+            );
+        }
 
-                  </Router>
-
-
-
-
-      );
     }
-
-
-
-
 
   }
   
-  export default FooterNav;
+  export default withRouter(connect(()=>({}))(FooterNav));
   

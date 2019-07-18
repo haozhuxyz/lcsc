@@ -7,24 +7,26 @@ import {
   Route
 } from "react-router-dom"
 
-import mf1 from "./assets/img/mf1.png"
+/*import mf1 from "./assets/img/mf1.png"
 import mf2 from "./assets/img/mf2.png"
 import mf3 from "./assets/img/mf3.png"
-import mf4 from "./assets/img/mf4.png"
+import mf4 from "./assets/img/mf4.png"*/
 import router from "./router/index"
-
+import FooterNav from "./components/FooterNav"
 
 class App extends React.Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
     }
 
   render(){
 
+
     return (
       <div className="App">
         <Router>
-          <div className="footer">
+
+          {/*<div className="footer">
             <NavLink style={{background:"#606063"}} activeStyle={{background:"#3c3e46"}} to={"/Home"}>
                 <img src={mf1} alt=""/>
                 <span>
@@ -49,7 +51,11 @@ class App extends React.Component{
                     个人中心
                 </span>
             </NavLink>
-          </div>
+          </div>*/}
+
+
+            <FooterNav></FooterNav>
+
           {
             router.map((v,i)=>{
               return(
