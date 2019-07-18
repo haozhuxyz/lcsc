@@ -1,13 +1,19 @@
-.classify{
-    width:100%;
+.classify {
+    width: 100%;
     height: 100%;
 }
-ul,li,dl,dt,dd {
+
+ul,
+li,
+dl,
+dt,
+dd {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.top{
+
+.top {
     position: fixed;
     background: #3c3e46;
     color: #fff;
@@ -15,54 +21,63 @@ ul,li,dl,dt,dd {
     height: 44px;
     line-height: 44px;
 }
+
 .top img {
     position: absolute;
     left: 0;
     height: 44px;
 
 }
-.view{
-    margin-top:0px;
+
+.view {
+    margin-top: 0px;
     display: flex;
     justify-content: space-between;
     height: 100%;
-    
+
 }
-.view ul{
+
+.view ul {
     width: 30%;
-    top:44px;
+    top: 44px;
     position: fixed;
     height: 100%;
     background: #f3f5f7;
 }
-.view-left{
+
+.view-left {
     color: #888;
     font-size: 15px;
-    
+
 }
-.view-left li{
+
+.view-left li {
     width: 100%;
     height: 50px;
     line-height: 50px;
     text-align: center;
 }
-.view-left li:hover{
+
+/* .liStyle {
     background-color: #fff;
     color: #4378fd;
     border-left: 3px solid #4378fd;
-}
-.view-rigth{
+} */
+
+.view-rigth {
     margin-top: 44px;
     width: 70%;
     padding: 14px 12px;
     box-sizing: border-box;
     color: #5d5d5d;
 }
-.view-rigth dl{
+
+.view-rigth dl {
     padding-bottom: 20px;
     overflow: hidden;
 }
-.view-rigth dt{
+
+.view-rigth dt {
     float: left;
     width: 100%;
     font-size: 14px;
@@ -70,15 +85,18 @@ ul,li,dl,dt,dd {
     text-align: left;
     border-bottom: 1px dotted #ececec
 }
-.view-rigth dd{
+
+.view-rigth dd {
     font-size: 12px;
     float: left;
     width: 33%;
     overflow: hidden;
-    padding-top:9px; 
+    padding-top: 9px;
+    color: #727272;
 
 }
-.v-r-img{
+
+.v-r-img {
     width: 45%;
     height: 50px;
     float: left;
@@ -86,6 +104,7 @@ ul,li,dl,dt,dd {
     border: 1px solid #ececec;
     position: relative;
 }
+
 .view-rigth img {
     max-height: 100%;
     max-width: 100%;
