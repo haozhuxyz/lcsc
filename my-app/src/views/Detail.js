@@ -1,10 +1,15 @@
 import React, {Component} from 'react';
 import "../assets/css/Detail.css"
+import  axios from "axios"
+
 
 class Detail extends Component {
     constructor(props) {
         super(props)
         this.list = props.location.state.data
+        this.state={
+            product_id : this.list.product_id,
+        }
     }
     render() {
         return (
@@ -21,11 +26,21 @@ class Detail extends Component {
                         <img className="detailimg_1" src={this.list.img_url} alt=""></img>
                     </div>
                     <h2>{this.list.title}</h2>
-                    <span>价格：{this.list.price}元</span>
-                    <p>药效：{this.list.title_secondary}</p>
+                    <span>价格：{this.list.showprice}元</span>
+                    <p>{this.list.title_secondary}</p>
+                    <p>公司：{this.list.business_name}</p>
                 </div>
             </div>
         )
+    }
+    getGoods() {
+        axios.get("https://www.linkpet.com.cn/Mobile/Product/productDetail/ProductDetail?id="+this.state.product_id)
+            .then(({data})=>{
+                console.log(data)
+            })
+    }
+    componentDidMount(){
+        this.getGoods();
     }
     confirm = () =>{
         this.props.history.go(-1)

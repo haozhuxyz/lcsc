@@ -53,7 +53,7 @@ class Home extends React.Component{
                             return (
                                 <div key={index} className="orderList">
                                     <span className="orderListTitle">{index+1}、{v.title}</span>
-                                    <div classNmae="goods_1">
+                                    <div>
                                         {
                                             v.recmmd_product_list.map((m,i)=>{
                                                 return (
@@ -125,7 +125,7 @@ class Home extends React.Component{
         this.props.history.push({pathname: `/Detail/${v.product_id}`,state:{data: v}})
     }
     routerGoShop(v) {
-        this.props.history.push({pathname: `/DetailShop/${v.brand_id}`,state:{data: v}})
+        this.props.history.push({pathname: `/DetailShop/${v.brand_id}/${v.product_id}`,state:{data: v}})
     }
 }
 
