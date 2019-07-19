@@ -276,3 +276,30 @@
 .detailChange{
     display: block;
 }
+.buybar{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    justify-content: space-between;
+
+
+}
+.fastbuy{
+    height: 50px;
+    flex: 1;
+    background: #6cc95c;
+    color:#fff;
+    text-align: center;
+    line-height: 50px;
+}
+.addcart{
+    height: 50px;
+    flex: 1;
+    background: #4378fd;
+    color:#fff;
+    text-align: center;
+    line-height: 50px;
+}
