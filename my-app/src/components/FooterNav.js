@@ -32,6 +32,7 @@ class FooterNav extends React.Component{
         const hideFooterPath = ['/login', '/register','/detail','/detailshop','/classifyshoplist']
         //const hideFooter = hideFooterPath.includes(pathname.trim())
         //console.log(pathname.toLowerCase())
+        // console.log(pathname.trim(),12121212)
         for(let i=0;i<hideFooterPath.length;i++){
             if((pathname.trim()).toLowerCase().indexOf(hideFooterPath[i].toLowerCase())!==-1){
                 hideFooter=true;

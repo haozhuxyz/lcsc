@@ -51,18 +51,22 @@ dd {
 
 }
 
-.view-left li {
+.list {
     width: 100%;
     height: 50px;
     line-height: 50px;
     text-align: center;
 }
 
-/* .liStyle {
+.liStyle {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
     background-color: #fff;
     color: #4378fd;
     border-left: 3px solid #4378fd;
-} */
+}
 
 .view-rigth {
     margin-top: 44px;
