@@ -9,7 +9,7 @@ class Detail extends Component {
         this.list = props.location.state.data
         this.state={
             product_id : this.list.product_id,
-            info:[],
+            info:'',
             shop:[],
             all:{},
             img:[],
@@ -137,6 +137,10 @@ class Detail extends Component {
     getGoods() {
         axios.get("/proxy/Product/productDetail/ProductDetail?id="+this.state.product_id)
             .then(({data})=>{
+<<<<<<< HEAD
+=======
+                // console.log(data.data)
+>>>>>>> 16937585491833ca69f3d021d9ac8833786ba3eb
                 this.setState({
                     all:data.data,
                     info:data.data.info,
