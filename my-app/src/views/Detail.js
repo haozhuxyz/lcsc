@@ -129,7 +129,6 @@ class Detail extends Component {
     getGoods() {
         axios.get("/proxy/Product/productDetail/ProductDetail?id="+this.state.product_id)
             .then(({data})=>{
-                console.log(data.data)
                 this.setState({
                     all:data.data,
                     info:data.data.info,

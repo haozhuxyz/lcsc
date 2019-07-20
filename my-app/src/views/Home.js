@@ -2,8 +2,6 @@ import React from "react";
 import  axios from "axios"
 import "../assets/css/Home.css"
 
-
-
 class Home extends React.Component{
     constructor(){
         super();
@@ -15,7 +13,6 @@ class Home extends React.Component{
         }
     }
     render(){
-        console.log(this.state.goods)
         return (
             <div className="wrap">
                 <div className="head">
@@ -66,7 +63,6 @@ class Home extends React.Component{
                                             })
                                         }
                                     </div>
-                                    
                                     <div>
                                         {
                                             v.brand.map((a,b)=>{
@@ -84,7 +80,6 @@ class Home extends React.Component{
                         })
                     }
                 </div>
-                
                 <div className="title">产品推荐</div>
                 <div className="context">
                     {

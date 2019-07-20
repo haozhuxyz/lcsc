@@ -8,11 +8,10 @@ import {
 import Arrow from "../assets/img/Arrow.png";
 class Classify extends React.Component{
     render(){
-        console.log('~~~',this.props);
         return (
             <div className='classify'>
                 <div className='top'>
-                    <img src={Arrow} onClick={()=>{this.props.history.go(-1)}}/>
+                    <img src={Arrow} onClick={()=>{this.props.history.go(-1)}} alt=""/>
                     <span>分类</span>
                 </div>
                 <div className='view'>
@@ -21,9 +20,9 @@ class Classify extends React.Component{
                         {
                             this.props.classify.list.map(v=>{
                                 return(
-                                        <li key={v.category_fid} className='list' onClick={()=>{
-                                            this.props.getClassifyShopList(v.category_fid)
-                                        }}>{v.name}</li>
+                                    <li key={v.category_fid} className='list' onClick={()=>{
+                                        this.props.getClassifyShopList(v.category_fid)
+                                    }}>{v.name}</li>
                                 )
                             })
                         }
@@ -40,8 +39,7 @@ class Classify extends React.Component{
                                                 <dd key={v.category_id} onClick={
                                                     ()=>{
                                                         this.props.history.push({pathname: `/ClassifyShopList`,state:{data: v}});
-                                                    }
-                                                }>
+                                                    }}>
                                                     {v.name}
                                                 </dd>
                                             )
@@ -70,7 +68,6 @@ class Classify extends React.Component{
         this.props.getClassifyList();
         this.props.getClassifyShopList();
     }
-    
 }
 function mapStateToProps({classify}){
     return{
@@ -105,7 +102,6 @@ function mapDispatchToProps(dispatch){
                     })
                 })
             })
-            
         }
     }
 }

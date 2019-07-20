@@ -9,7 +9,7 @@ import Register from "../views/Register"
 import ClassifyShopList from "../views/ClassifyShopList"
 export default [
     {
-        path:"/Home",
+        path:"/",
         component:Home,
         name:'首页',
         exact:true

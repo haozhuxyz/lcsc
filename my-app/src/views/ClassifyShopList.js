@@ -41,7 +41,7 @@ class ClassifyShopList extends React.Component{
                                             <p className='shop_name'>{v.title}</p>
                                             <p className='second_name'>{v.title_secondary}</p>
                                         </div>
-                                        <p className='shop_price'>{this.state.judge?'￥'+v.price:'登录显示价格'}</p>
+                                        <p className='shop_price'>价格：{v.price}元</p>
                                         <p className='shop_city'>{v.business_name}</p>
                                         <img src={blueCart} alt=""/>
                                     </div>
@@ -55,10 +55,8 @@ class ClassifyShopList extends React.Component{
     }
     getShopList(){
         let data = this.state.list;
-        console.log(data);
         axios.get("/proxy/Product/index/ProductsList?cfid="+data.f_id+"&mid="+data.mid_category_id+"&cid="+data.category_id+"&cate=1")
         .then(({data})=>{
-            console.log(data.data.list,111);
             this.setState({
                 shopList:data.data.list
             })

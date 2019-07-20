@@ -1,5 +1,4 @@
 import {classify} from '../state/Classify';
-
 export default function (state = classify,{type,payload}){
     state = JSON.parse(JSON.stringify(state));
     if(type === 'CHANGE_CLASSIFYLIST'){
