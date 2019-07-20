@@ -105,6 +105,14 @@ class Detail extends Component {
                             }
                         </div>
                     </div>
+                    <div className={"buybar"}>
+                        <div className={"fastbuy"}>
+                            立即购买
+                        </div>
+                        <div className={"addcart"}>
+                            加入购物车
+                        </div>    
+                    </div>
                 </div>
             )
         }else{

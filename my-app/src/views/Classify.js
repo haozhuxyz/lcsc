@@ -20,9 +20,10 @@ class Classify extends React.Component{
                         {
                             this.props.classify.list.map(v=>{
                                 return(
-                                    <li key={v.category_fid} className='list' onClick={()=>{
-                                        this.props.getClassifyShopList(v.category_fid)
-                                    }}>{v.name}</li>
+                                        <li ref={v.category_fid} key={v.category_fid} className={this.refs==='33'?'liStyle':'list'} onClick={()=>{
+                                            this.changeClassName(v.category_fid);
+                                            this.props.getClassifyShopList(v.category_fid)
+                                        }}>{v.name}</li>
                                 )
                             })
                         }
@@ -63,6 +64,19 @@ class Classify extends React.Component{
                 </div>
             </div>
         )
+    }
+    changeClassName(_id='33'){
+        console.log(_id);
+        console.log(typeof(this.refs));
+        console.log(this.refs[_id]);
+        let obj = this.refs;
+        console.log(obj);
+        Object.keys(obj).forEach(function(key){
+
+            obj[key].className='list';
+        
+        });
+        this.refs[_id].className='liStyle';
     }
     componentDidMount(){
         this.props.getClassifyList();
