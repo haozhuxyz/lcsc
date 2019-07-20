@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import "../assets/css/Detail.css"
+import backcart from "../assets/img/backcart.png"
 import  axios from "axios"
-
-
+import store from "../store/index"
+import {addToCart,updateCart,deleteFromCart} from "../store/actions/cart";
 class Detail extends Component {
     constructor(props) {
         super(props)
@@ -16,9 +17,48 @@ class Detail extends Component {
             same_list:[],
             detailOne:[],
             display_name:"block",
+            user:'',
+            cartInfo:{},
+            cartList:[]
+
         }
     }
+    goCart(){
+        console.log(111)
+        this.props.history.push("/cart")
+    }
+    addCart(){
+
+        /*console.log("加入购物车")
+        console.log(Number(this.list.showprice))
+        console.log(this.list.title)
+        console.log("库存",this.state.info.stock)*/
+
+        if(localStorage.lcuserName&&localStorage.lcpwd){
+            if(this.state.info.stock<1){
+                alert("库存不足")
+
+                }else{
+                console.log("加入购物车",this.state.product_id)
+                //console.log(this.state.user)
+                store.dispatch(addToCart(this.list.title, 1, Number(this.list.showprice),this.state.product_id,this.list.img_url));
+               // this.props.history.push("cart")
+                //console.log(this.props)
+
+
+
+            }
+        }
+        else{
+            alert("请先登录")
+
+        }
+
+
+
+    }
     render() {
+
         return (
             <div className="detailWrap">
                 <div className="detailTitle">
@@ -26,7 +66,11 @@ class Detail extends Component {
                     <ul className="detailTitle_1">
                         <li onClick={this.display_block.bind(this)}>商品</li>
                         <li onClick={this.display_none.bind(this)}>详情</li>
+
                     </ul>
+                    <div className={"gocart"} onClick={this.goCart.bind(this)}>
+                        <img src={backcart} alt=""/>
+                    </div>
                 </div>
                 <div style={{display:this.state.display_name}}>
                     <div className="detailimg">
@@ -109,7 +153,7 @@ class Detail extends Component {
                         立即购买
 
                     </div>
-                    <div className={"addcart"}>
+                    <div className={"addcart"} onClick={this.addCart.bind(this)}>
                         加入购物车
 
                     </div>
@@ -144,6 +188,19 @@ class Detail extends Component {
     }
     componentWillMount(){
         this.getGoods();
+        if(localStorage.lcuserName&&localStorage.lcpwd){
+            this.setState({
+                user:localStorage.lcuserName
+            })
+
+                //this.state.user=localStorage.lcuserName
+
+        }else{
+           // this.state.user=''
+            this.setState({
+                user:""
+            })
+        }
     }
     confirm = () =>{
         this.props.history.go(-1)

@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 
 import store from './store'
+import {addToCart,updateCart,deleteFromCart} from "./store/actions/cart";
 
 import {
     Provider

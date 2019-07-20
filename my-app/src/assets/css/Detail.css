@@ -11,6 +11,16 @@
     border-bottom: 1px solid #d7d7d7;
     z-index: 99;
     padding: 0 .24rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 18px;
+
+}
+.gocart img{
+    width: 28px;
+    height: 28px;
 }
 .detailGo{
     width: 1.56rem;
@@ -26,8 +36,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1rem;
-    margin-left: 7.7rem;
+
+
 }
 .detailTitle_1 li{
     font-size:18px;
@@ -236,6 +246,7 @@
     border-radius: .1rem;
     font-weight: 400;
 }
+
 .detailOne_2{
     border-bottom: .1rem solid #ececec;
     width: 100%;
