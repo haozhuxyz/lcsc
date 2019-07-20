@@ -6,6 +6,7 @@ export default function (state = classify,{type,payload}){
         state.list = payload.classifyList
     }
     if(type === 'CHANGE_CLASSIFTSHOPLIST'){
+        state.shopListData = payload.shopListData
         state.shopList.cate = payload.shopListCate
         state.shopList.brand = payload.shopListBrand
     }

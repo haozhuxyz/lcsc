@@ -7,8 +7,22 @@ import {
 
 import Arrow from "../assets/img/Arrow.png";
 class Classify extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={
+            goodsClass:[],
+            trademark:[]
+        }
+    }
     render(){
-        console.log('~~~',this.props);
+        try{
+            if(this.state.goodsClass.length===0) this.changData('33');
+        }
+        catch(err){
+
+        }
+        // console.log(this.state.goodsClass.length===0,1111)
+        // console.log('~~~',this.props.classify.shopListData);
         return (
             <div className='classify'>
                 <div className='top'>
@@ -21,9 +35,10 @@ class Classify extends React.Component{
                         {
                             this.props.classify.list.map(v=>{
                                 return(
-                                        <li ref={v.category_fid} key={v.category_fid} className={this.refs==='33'?'liStyle':'list'} onClick={()=>{
+                                        <li ref={v.category_fid} key={v.category_fid}  className={v.category_fid==='33'?'liStyle':'list'} onClick={()=>{
                                             this.changeClassName(v.category_fid);
-                                            this.props.getClassifyShopList(v.category_fid)
+                                            // this.props.getClassifyShopList(v.category_fid)
+                                            this.changData(v.category_fid);
                                         }}>{v.name}</li>
                                 )
                             })
@@ -32,7 +47,7 @@ class Classify extends React.Component{
                     </div>
                     <div className='view-rigth'>
                         {
-                            this.props.classify.shopList.cate.map(v=>{
+                            this.state.goodsClass.map(v=>{
                                 return(
                                     <dl key={v.middle_id}>
                                         <dt>{v.name}</dt>
@@ -52,7 +67,7 @@ class Classify extends React.Component{
                             })
                         }
                         {
-                            this.props.classify.shopList.brand.map(v=>{
+                            this.state.trademark.map(v=>{
                                 return(
                                     <div  key={v.brand_id} className='v-r-img'>
                                         <img src={v.logo} alt="" onClick={()=>{
@@ -67,12 +82,21 @@ class Classify extends React.Component{
             </div>
         )
     }
-    changeClassName(_id='33'){
-        console.log(_id);
-        console.log(typeof(this.refs));
-        console.log(this.refs[_id]);
+    changData(_id){
+        let data = this.props.classify.list;
+        // console.log(data);
+        this.setState({
+            goodsClass:data.find(v=>v.category_fid===_id).cate,
+            trademark:data.find(v=>v.category_fid===_id).brand
+        })
+        console.log(this.state.goodsClass,this.state.trademark)
+    }
+    changeClassName(_id){
+        // console.log(_id);
+        // console.log(typeof(this.refs));
+        // console.log(this.refs[_id]);
         let obj = this.refs;
-        console.log(obj);
+        // console.log(obj);
         Object.keys(obj).forEach(function(key){
 
             obj[key].className='list';
@@ -110,9 +134,11 @@ function mapDispatchToProps(dispatch){
             dispatch((dispatch)=>{
                 axios.get("/proxy/Index/product_category")
                 .then(({data})=>{
+                    // console.log(data.data.cates)
                     dispatch({
                         type:'CHANGE_CLASSIFTSHOPLIST',
                         payload:({
+                            shopListData:data.data.cates,
                             shopListCate:data.data.cates.find(v=>v.category_fid === _id).cate,
                             shopListBrand:data.data.cates.find(v=>v.category_fid === _id).brand
                         })
