@@ -71,7 +71,6 @@ class ShopDetail extends Component {
     getList(){
         axios.get("/proxy/Product?brand_id="+this.state.brand_id)
             .then(({data})=>{
-                console.log(1111,data)
                 this.setState({
                     goodsList:data.data.list
                 })

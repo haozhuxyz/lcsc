@@ -41,7 +41,7 @@ p {
 }
 
 .ShopDetailgoodspic {
-    width: 100px;
+    width: 35%;
     height: 100px;
     margin-right: 10px;
 }
@@ -53,7 +53,7 @@ p {
 
 .ShopDetailgoodsFont {
     text-align: left;
-    width: 200px;
+    width: 65%;
     position: relative;
 }
 

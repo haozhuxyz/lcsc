@@ -1,6 +1,8 @@
 import  classify from './Classify';
+
 import cartReducer from "./cart"
 import productsReducer from "./products"
+
 
 import {
     combineReducers
