@@ -1,4 +1,4 @@
-import {ADD_TO_CART,UPDATE_CART,DELETE_FROM_CART,ADD_NUM,REDUCE_NUM} from "../actions/cart"
+import {ADD_TO_CART,UPDATE_CART,DELETE_FROM_CART,ADD_NUM,REDUCE_NUM,CHANGE_CHECK} from "../actions/cart"
 
 
 const initState = {
@@ -58,6 +58,14 @@ export default function(state=initState,action){
                 cart:state.cart.filter(item=>item.shopId===action.payload.shopId?item.quantity-=action.payload.num:item)
             }
         }
+
+        case CHANGE_CHECK:{
+            return {
+                ...state,
+                cart:state.cart.filter(item=>item.shopId===action.payload.shopId?item.mychecked+=action.payload.num:item)
+            }
+        }
+
         default:
             return state
     }

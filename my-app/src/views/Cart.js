@@ -3,13 +3,16 @@ import "../assets/css/Cart.css";
 import la from "../assets/img/my1.png";
 import shop0 from "../assets/img/shop0.jpg"
 import store from "../store"
-import {addToCart,updateCart,deleteFromCart,addNum,reduceNum} from "../store/actions/cart";
+import {addToCart,updateCart,deleteFromCart,addNum,reduceNum,changeCheck} from "../store/actions/cart";
 
 class Cart extends React.Component{
     constructor(){
         super()
         this.state={
             isLogin:0,
+            num:0,
+            sum:0,
+            checked:false
 
 
         }
@@ -26,32 +29,84 @@ class Cart extends React.Component{
     reduceNum(shopId){
         //console.log(12345)
         //console.log(store.getState().cartReducer.cart);
+
+        store.dispatch(reduceNum(shopId,1));
+        this.getSum()
         this.setState({
 
+            num:this.getSum(),
+            sum:this.getCost()
+
         })
-        store.dispatch(reduceNum(shopId,1));
 
 
     }
     add(shopId){
         //console.log(shopId)
       // console.log(store.getState())
+
+        store.dispatch(addNum(shopId,1));
+        this.getSum()
         this.setState({
 
+            num:this.getSum(),
+            sum:this.getCost()
+
         })
-        store.dispatch(addNum(shopId,1));
+
+    }
+    changeChecked(shopId){
+        //console.log("改变")
+
+
+        store.dispatch(changeCheck(shopId,1));
+        this.getSum()
+        this.setState({
+
+            num:this.getSum(),
+            sum:this.getCost()
+
+        })
+
+    }
+
+    componentWillMount(){
+        if(localStorage.lcuserName&&localStorage.lcpwd){
+            this.setState({
+                isLogin : 1,
+                num:this.getSum(),
+                sum:this.getCost()
+
+            })
+        }
 
 
 
 
     }
-    componentWillMount(){
-        if(localStorage.lcuserName&&localStorage.lcpwd){
-            this.setState({
-                isLogin : 1,
+    getSum(){
+        var mynum=0;
 
-            })
-        }
+        store.getState().cartReducer.cart.filter((v)=>{
+            if(v.mychecked%2==0){
+                mynum+=v.quantity;
+
+            }
+        })
+        console.log(mynum)
+        return mynum
+    }
+    getCost(){
+        var mycost=0;
+        store.getState().cartReducer.cart.filter((v)=>{
+            if(v.mychecked%2==0){
+                mycost+=v.quantity*v.unitCost
+
+            }
+        })
+
+        return mycost
+
     }
     render(){
         console.log("购物车",store.getState().cartReducer.cart)
@@ -71,7 +126,7 @@ class Cart extends React.Component{
                 <div className={"cartmain"} style={{display:this.state.isLogin?"block":"none"}}>
                     <div className={"cart_h"}>
                         <div>
-                            <input type="checkbox" className={"check_all"}/>
+                            <input type="checkbox" className={"check_all"} style={{visibility:"hidden"}}/>
                         </div>
                         <h3>商品信息</h3>
                         <span>操作</span>
@@ -83,7 +138,7 @@ class Cart extends React.Component{
                                 return (
                                     <div key={v.shopId} className={"product_list"}>
                                         <div className={"input_check"}>
-                                            <input type="checkbox" name={"pids"} value={"275"} className={"pids"}/>
+                                            <input type="checkbox" mychecked={v.checked} checked={v.mychecked%2==0?true:false} onChange={this.changeChecked.bind(this,v.shopId)}  className={"pids"}/>
                                         </div>
                                         <div className={"cart_goods_box"}>
                                             <img src={v.imgUrl?v.imgUrl:shop0} alt=""/>
@@ -106,13 +161,13 @@ class Cart extends React.Component{
 
                         }
 
-
-
                     </div>
                     <div className={"mysum"}>
                         <div className={"sumleft"}>
-                            <p className={"money"}>￥0.00</p>
-                            <div><span>商品</span><b>0</b></div>
+
+
+                            <p className={"money"}>￥{this.state.sum.toFixed(2)}</p>
+                            <div><span>商品</span><b>{this.state.num}</b></div>
                         </div>
                         <span className={"tj"}>提交订单</span>
                     </div>
