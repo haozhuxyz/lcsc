@@ -4,6 +4,7 @@ import backcart from "../assets/img/backcart.png"
 import  axios from "axios"
 import store from "../store/index"
 import {addToCart,updateCart,deleteFromCart} from "../store/actions/cart";
+
 class Detail extends Component {
     constructor(props) {
         super(props)
@@ -45,8 +46,6 @@ class Detail extends Component {
                // this.props.history.push("cart")
                 //console.log(this.props)
 
-
-
             }
         }
         else{
@@ -58,25 +57,7 @@ class Detail extends Component {
 
     }
     render() {
-<<<<<<< HEAD
 
-        return (
-            <div className="detailWrap">
-                <div className="detailTitle">
-                    <div onClick={this.confirm} className="detailGo">返回</div>
-                    <ul className="detailTitle_1">
-                        <li onClick={this.display_block.bind(this)}>商品</li>
-                        <li onClick={this.display_none.bind(this)}>详情</li>
-
-                    </ul>
-                    <div className={"gocart"} onClick={this.goCart.bind(this)}>
-                        <img src={backcart} alt=""/>
-                    </div>
-                </div>
-                <div style={{display:this.state.display_name}}>
-                    <div className="detailimg">
-                        <img className="detailimg_1" src={this.list.img_url} alt=""></img>
-=======
         if(this.state.shop && this.state.detailOne){
             return (
                 <div className="detailWrap">
@@ -86,7 +67,10 @@ class Detail extends Component {
                             <li onClick={this.display_block.bind(this)}>商品</li>
                             <li onClick={this.display_none.bind(this)}>详情</li>
                         </ul>
->>>>>>> 023b6bddc317c2ec11dc4af0576e5df9391a0a96
+                        <div className={"gocart"} onClick={this.goCart.bind(this)}>
+                            <img src={backcart} alt=""/>
+                        </div>
+
                     </div>
                     <div style={{display:this.state.display_name}}>
                         <div className="detailimg">
@@ -164,23 +148,22 @@ class Detail extends Component {
                             }
                         </div>
                     </div>
-<<<<<<< HEAD
-                    <div className={"addcart"} onClick={this.addCart.bind(this)}>
-                        加入购物车
 
-=======
                     <div className={"buybar"}>
                         <div className={"fastbuy"}>
                             立即购买
                         </div>
-                        <div className={"addcart"}>
+                        <div className={"addcart"} onClick={this.addCart.bind(this)}>
                             加入购物车
-                        </div>    
->>>>>>> 023b6bddc317c2ec11dc4af0576e5df9391a0a96
+                        </div>
+
                     </div>
                 </div>
-            )
+
+                    )
+
         }else{
+
             return (
                 <div className="ShopDetailwrap">
                     <button onClick={this.confirm}>返回</button>
@@ -188,7 +171,9 @@ class Detail extends Component {
                 </div>
             )
         }
-    }
+}
+
+
     display_none() {
         this.setState({
             display_name: 'none',
@@ -202,10 +187,7 @@ class Detail extends Component {
     getGoods() {
         axios.get("/proxy/Product/productDetail/ProductDetail?id="+this.state.product_id)
             .then(({data})=>{
-<<<<<<< HEAD
-=======
-                // console.log(data.data)
->>>>>>> 16937585491833ca69f3d021d9ac8833786ba3eb
+
                 this.setState({
                     all:data.data,
                     info:data.data.info,
@@ -241,4 +223,4 @@ class Detail extends Component {
     }
 }
 
-export default Detail;
+export default Detail

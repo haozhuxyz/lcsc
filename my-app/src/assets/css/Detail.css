@@ -10,7 +10,7 @@
     top: 0;
     border-bottom: 1px solid #d7d7d7;
     z-index: 99;
-    padding: 0 .24rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
