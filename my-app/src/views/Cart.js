@@ -3,7 +3,7 @@ import "../assets/css/Cart.css";
 import la from "../assets/img/my1.png";
 import shop0 from "../assets/img/shop0.jpg"
 import store from "../store"
-import {addToCart,updateCart,deleteFromCart,addNum,reduceNum,changeCheck} from "../store/actions/cart";
+import {addToCart,updateCart,deleteFromCart,addNum,reduceNum,changeCheck,changeAllTrue,changeAllFalse} from "../store/actions/cart";
 
 class Cart extends React.Component{
     constructor(){
@@ -60,6 +60,18 @@ class Cart extends React.Component{
 
 
         store.dispatch(changeCheck(shopId,1));
+
+        if(store.getState().cartReducer.cart.every((v,i)=>{
+                return v.mychecked%2===0
+            })){
+            console.log("alltrue")
+            this.refs.checkAll.checked = true;
+
+
+        }else{
+            this.refs.checkAll.checked = false;
+        }
+
         this.getSum()
         this.setState({
 
@@ -68,6 +80,33 @@ class Cart extends React.Component{
 
         })
 
+
+
+    }
+
+    changeAll(){
+        console.log("all")
+
+        if (store.getState().cartReducer.cart.length>0){
+            if(store.getState().cartReducer.cart.every((v,i)=>{
+                return v.mychecked%2===0
+                })){
+                store.dispatch(changeAllFalse())
+
+            }else{
+                store.dispatch(changeAllTrue())
+            }
+
+        }
+
+
+        this.getSum()
+        this.setState({
+
+            num:this.getSum(),
+            sum:this.getCost()
+
+        })
     }
 
     componentWillMount(){
@@ -126,7 +165,7 @@ class Cart extends React.Component{
                 <div className={"cartmain"} style={{display:this.state.isLogin?"block":"none"}}>
                     <div className={"cart_h"}>
                         <div>
-                            <input type="checkbox" className={"check_all"} style={{visibility:"hidden"}}/>
+                            <input type="checkbox" ref={"checkAll"} className={"check_all"} onChange={this.changeAll.bind(this)}/>
                         </div>
                         <h3>商品信息</h3>
                         <span>操作</span>

@@ -5,8 +5,11 @@ export const DELETE_FROM_CART = "DELETE_FROM_CART"
 export const ADD_NUM = "ADD_NUM"
 export const REDUCE_NUM = "REDUCE_NUM"
 export const CHANGE_CHECK = "CHANGE_CHECK"
+export const CHANGE_ALL_TRUE = "CHANGE_ALL_TRUE"
+export const CHANGE_ALL_FALSE = "CHANGE_ALL_FALSE"
+
 //action行为 添加
-//奇数--》未选中
+//奇数--》未选中  偶数--》选中
 export function addToCart(product,quantity,unitCost,shopId,imgUrl,mychecked=1){
     return {
         type:ADD_TO_CART,
@@ -44,6 +47,23 @@ export function changeCheck(shopId,num){
         payload:{shopId,num}
     }
 
+}
+
+//action 选中状态全部改变选中
+
+export function changeAllTrue(){
+    return {
+        type:CHANGE_ALL_TRUE
+    }
+
+}
+
+//action 选中状态全部变为非选中
+
+export function changeAllFalse(){
+    return {
+        type:CHANGE_ALL_FALSE
+    }
 }
 
 //action 行为 删除
